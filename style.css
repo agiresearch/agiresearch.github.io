@@ -5,6 +5,10 @@ body {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Navbar Styles */
 .navbar {
   background-color: #333;
@@ -110,7 +114,7 @@ body {
 /* Overlapping Contributors Section Styles */
 .overlap {
   position: relative;
-  top: -50px; /* adjust the top value to control the overlap */
+  top: -4em; /* adjust the top value to control the overlap */
   z-index: 1; /* ensure the contributors section is on top */
   display: flex;
   justify-content: center;
@@ -118,8 +122,8 @@ body {
 }
 
 .overlap img {
-  width: 100px; /* adjust the width to control the size of the images */
-  height: 100px;
+  width: 150px; /* adjust the width to control the size of the images */
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 10px;
@@ -136,6 +140,14 @@ body {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+.vision h3 {
+    font-size: 4em;
+}
+
+.vision h4 {
+    font-size: 3em;
+} 
 
 /* Projects Section Styles */
 .projects {
@@ -165,6 +177,13 @@ body {
 .projects a:hover {
   color: #23527c;
 }
+
+.preheader {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3498db;
+} 
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
