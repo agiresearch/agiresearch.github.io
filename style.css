@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between; /* added */
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+/* Desktop styles */
+.navbar ul {
+  display: flex; /* added */
+  justify-content: space-between; /* added */
+  list-style: none; /* added */
+  margin: 0; /* added */
+  padding: 0; /* added */
+}
+
+.navbar li {
+  margin-right: 20px; /* added */
+}
+
+/* Responsive Navbar Styles */
+@media (max-width: 768px) {
+ .navbar {
+    position: relative;
+  }
+ .navbar ul {
+    display: none; /* hide the menu on mobile */
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 1em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%; /* added */
+  }
+ .navbar li {
+    margin-right: 0; /* reset margin */
+  }
+ .navbar li a {
+    display: block; /* make links block-level */
+    padding: 10px; /* add some padding */
+  }
+ .navbar:hover ul {
+    display: block; /* show the menu on hover */
+  }
+  /* Add a toggle button for mobile */
+ .navbar::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-image: url("img/hamburger.png");
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+ .navbar:hover::before {
+    background-color: #444;
+  }
+  .hero {
+    padding: 1em 0.5em 2em 1em; /* adjust the values to your liking */
+    font-size: 2em; /* adjust the font size to your liking */
+  }
+}
+        
+/* Hero Section Styles */
+.hero {
+  background-color: #3498db;
+  color: #fff;
+  padding: 4em 2em 10em 4em;
+  text-align: left;
+  font-size: 4vh;
+}
+
+.hero h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero .hero-title {
+  display: block;
+  font-size: 10vh;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Overlapping Contributors Section Styles */
+.overlap {
+  position: relative;
+  top: -50px; /* adjust the top value to control the overlap */
+  z-index: 1; /* ensure the contributors section is on top */
+  display: flex;
+  justify-content: center;
+  padding: 0 2em;
+}
+
+.overlap img {
+  width: 100px; /* adjust the width to control the size of the images */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+/* Vision Section Styles */
+.vision {
+  background-color: #fff;
+  padding: 2em;
+  text-align: center;
+}
+
+.vision p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Projects Section Styles */
+.projects {
+  padding: 2em;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.projects li:last-child {
+  border-bottom: none;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.projects a:hover {
+  color: #23527c;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+  .hero, .vision, .contributors, .projects {
+    padding: 0; /* remove padding on mobile devices */
+  }
+  .overlap {
+    top: 0; /* remove overlap on mobile devices */
+  }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* GitHub Section Styles */
+.github-section {
+  background-color: #fff;
+  padding: 4em;
+  text-align: center;
+}
+
+.github-button {
+  background-color: #337ab7;
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.github-button:hover {
+  background-color: #23527c;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  clear: both; /* add this to ensure footer is at the bottom */
+}
+
+/* Contributor Box Styles */
+.contributor-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px;
+  width: 400px; /* increased width to make the boxes bigger */
+}
+
+.contributor-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.contributor-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contributor-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contributor-box a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.contributor-box a:hover {
+  color: #23527c;
+}
+
+.contributor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contributors {
+  text-align: center;
+}
+
+/* Make the footer reach the end of the screen */
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* adjust the height to fit your needs */
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 1em 1em 2em 2em;
+}
